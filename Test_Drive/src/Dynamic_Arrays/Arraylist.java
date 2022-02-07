@@ -73,23 +73,20 @@ public class Arraylist
 		
 		
 		
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
+		Iterator<Integer> it = array.iterator();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		System.out.println(arr);
+		while(it.hasNext())
+		{
+			System.out.println(it.next()+" ");
+		}
+			
+			
+			
+			
+			
 		sc.close();
 	}
 }
