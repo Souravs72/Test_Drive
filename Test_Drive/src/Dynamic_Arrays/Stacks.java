@@ -36,6 +36,8 @@ public class Stacks
 }
 
 /*
+ 	Output:
+ 	
  	Stack = [Lion, Tiger, Buffalo, Hyena]
 	Hyena
 	Modified stack: [Lion, Tiger, Buffalo]
