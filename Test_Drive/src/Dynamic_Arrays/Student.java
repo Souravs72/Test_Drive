@@ -1,6 +1,6 @@
 package Dynamic_Arrays;
 
-public class Student
+public class Student implements Comparable<Student>
 {
 	String name;
 	int roll_no;
@@ -35,5 +35,10 @@ public class Student
 		if (roll_no == other.roll_no)
 			return true;
 		return true;
+	}
+	@Override
+	public int compareTo(Student that)
+	{
+		return this.roll_no - that.roll_no;
 	}
 }
