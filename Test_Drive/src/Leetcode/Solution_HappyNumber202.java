@@ -11,14 +11,12 @@ public class Solution_HappyNumber202
     	int ans = sc.nextInt();
         boolean res = isHappy(ans);
         System.out.println(res);
+        sc.close();
     }
-    
-    
-    
     
     static boolean isHappy(int ans) 
     {
-        if(ans == 1)
+    	if(ans == 1)
             return true;
         
         ArrayList<Integer> list = new ArrayList<>();
@@ -41,11 +39,6 @@ public class Solution_HappyNumber202
         }
     }
     
-    
-    
-    
-    
-    
     static int sums(int n)
     {
         int d = 0, sum =0;
@@ -60,48 +53,3 @@ public class Solution_HappyNumber202
         return sum;
     }
 }
-/*
-        int arr[] = new int[410];
-        
-        arr[0] = 0; arr[1] = 1;
-        for(int i = 2; i< 410; i++)
-        {
-            arr[i] = -1;
-        }
-        
-        
-        
-        
-        for(int i = 2; i< 410; i++)
-        {
-            int k = sums(i);
-            
-            if(k == 1 || arr[k] == 1)
-            {
-                arr[i] = 1;
-                for(int j = 2; j < 410; j++)
-                {
-                    if(arr[j]== -2)
-                        arr[j]= 1;
-                }
-                break;
-            }
-            else if(arr[k] == -2 || arr[k] == 0)
-            {
-                arr[i] = 0;
-                for(int j = 2; j < 410; j++)
-                {
-                    if(arr[j]== -2)
-                        arr[j]= 0;
-                }
-                break;
-            }
-            else
-                arr[k]-= 1;
-           
-        }
-        if(arr[ans]== 0)
-            return false;
-        else
-            return true;
-*/
