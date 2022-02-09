@@ -32,6 +32,8 @@ public class Collection
 		System.out.println(stud);
 		Collections.sort(stud);
 		System.out.println(stud);
+		
+		
 	}
 }
 
