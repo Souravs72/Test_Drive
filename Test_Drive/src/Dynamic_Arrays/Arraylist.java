@@ -1,6 +1,7 @@
 //    Here I will use all the methods of the ArrayList which is a class belonging to list interface. 
 
 package Dynamic_Arrays;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Arraylist
@@ -9,7 +10,8 @@ public class Arraylist
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		List<Integer> arr = new ArrayList<Integer>();
+		ArrayList<ArrayList<Integer>> listOfLists = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> arr = new ArrayList<Integer>();
 		
 		arr.add(12); // adds 12 to the list
 		arr.add(1, 14); // adds 14 to the index 1
@@ -20,20 +22,20 @@ public class Arraylist
 		//
 		//
 		
-		List<Integer> array = new ArrayList<Integer>();
-		array.addAll(arr); // copies all the elements of ArrayList arr to array.
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.addAll(arr); // copies all the elements of ArrayList arr to array.
 		
-		array.add(4);
-		array.add(3);
-		array.add(2);
-		array.add(1);
-		array.add(4);
+		list.add(4);
+		list.add(3);
+		list.add(2);
+		list.add(1);
+		list.add(4);
 		
-		for(int i = 0; i < array.size(); i++)
+		for(int i = 0; i < list.size(); i++)
 		{
-			System.out.println(array.get(i)); // get() is used to fetch the elements at index i
+			System.out.println(list.get(i)); // get() is used to fetch the elements at index i
 		}
-		System.out.println(array.lastIndexOf(4)); // checks for the last index of 4 in array
+		System.out.println(list.lastIndexOf(4)); // checks for the last index of 4 in array
 		
 		 Integer[] n = new Integer[arr.size()]; 
 		 
@@ -57,7 +59,7 @@ public class Arraylist
 		else
 			System.out.println("Array doesn't contain 3");
 			
-		if(array.containsAll(arr)) //checks if the List array contains all the elements present in List arr
+		if(list.containsAll(arr)) //checks if the List array contains all the elements present in List arr
 			System.out.println("Array contains all the elements in arr");
 		else
 			System.out.println("Array doesn't contain all the elements in arr");
@@ -66,7 +68,7 @@ public class Arraylist
 		arr.add(5);
 		arr.add(7);
 		
-		if(arr.equals(array)) // equals() is used to compare two lists whether both lists have the same size and all corresponding pairs of elements in the two lists are equal or not
+		if(arr.equals(list)) // equals() is used to compare two lists whether both lists have the same size and all corresponding pairs of elements in the two lists are equal or not
 			System.out.println("Equal");
 		else
 			System.out.println("Not equal");
@@ -76,16 +78,26 @@ public class Arraylist
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
-		Iterator<Integer> it = array.iterator();
+		Iterator<Integer> it = list.iterator();
 		
 		while(it.hasNext())
 		{
 			System.out.println(it.next()+" ");
 		}
-			
-			
-			
-			
+		
+		// Adding the lists in a list
+		listOfLists.add(list);
+		listOfLists.add(arr);
+				
+		System.out.println();
+		for(int i = 0; i < listOfLists.size(); i++)
+		{
+			for (int j = 0; j < listOfLists.get(i).size(); j++)
+			{
+				System.out.print(listOfLists.get(i).get(j)+" ");
+			}
+			System.out.println("");
+		}
 			
 		sc.close();
 	}

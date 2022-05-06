@@ -31,5 +31,6 @@ public class LearnMap
 		{
 			System.out.print(str+" ");
 		}
+		System.out.println(map.size());
 	}
 }
