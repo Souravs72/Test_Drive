@@ -43,3 +43,12 @@ public class String_Builder
 		System.out.println(sb.toString());
 	}
 }
+/*
+
+16
+Souravdbroisgoodtrue
+Yes
+Mammidbroisgoodtrue
+eurtdoogsiorbdimmaM
+
+*/
